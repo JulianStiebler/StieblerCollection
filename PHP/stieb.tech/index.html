@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>stiebler.tech</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="media/css/style.css">
+		<link rel="stylesheet" href="media/css/navigation.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="media/js/jQueryUse.js"></script>
+
+		<script src="media/js/terminal.js"></script>
+		<link rel="stylesheet" href="media/css/terminal.css">
+	</head>
+
+	<body>
+		<center>
+		  <header class="header">
+		    <div class="sitelogo">
+		    </div>
+		    <div id="nav_bar" class="navbar">
+		      <ul>
+		        <li><a class="active">Home</a></li>
+		        <li><a href="">About</a></li>
+		        <li><a href="">API</a></li>
+		        <li class="dropdown">
+		          <a id="reflink" class="blockline">Documentation</a>
+		          <div class="dropborder">
+		            <ul>
+		              <li class="dropdown-content"><a id="mail" href="">Email</a></li>
+		              <li class="dropdown-content"><a id="skype" href="">Skype</a></li>
+		              <li class="dropdown-content"><a id="skype" href="">Skype</a></li>
+		              <li class="dropdown-content"><a id="skype" href="">Skype</a></li>
+		              <li class="dropdown-content"><a id="skype" href="">Skype</a></li>
+		            </ul>
+		          </div>
+		        </li>
+		      </ul>
+		    </div>
+		  </header>
+		</center>
+
+		<div class="bgcontainer">
+		    <video  loop muted autoplay class="videobg">
+		        <source src="media/videos/fall2k.mp4" type="video/mp4">
+		    </video>
+		</div>
+
+		<div id="terminalWrapper">
+		    <div id="terminal">
+		        <div id="terminalfileBar"><a class="btn" href="#">&#10005;</a><a class="btn stnd" href="#">&#9472;</a><a class="btn stnd" href="#">&#9723;</a><span>stiebler.tech API</span></div>
+		        <div id="terminalOutput"></div>
+		    </div>
+		</div>
+
+		<script>
+			// Make the DIV element draggable:
+			dragElement(document.getElementById("terminal"));
+
+			function dragElement(elmnt) {
+			  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+			  if (document.getElementById(elmnt.id + "fileBar")) {
+			    // if present, the header is where you move the DIV from:
+			    document.getElementById(elmnt.id + "fileBar").onmousedown = dragMouseDown;
+			  } else {
+			    // otherwise, move the DIV from anywhere inside the DIV:
+			    elmnt.onmousedown = dragMouseDown;
+			  }
+
+			  function dragMouseDown(e) {
+			    e = e || window.event;
+			    e.preventDefault();
+			    // get the mouse cursor position at startup:
+			    pos3 = e.clientX;
+			    pos4 = e.clientY;
+			    document.onmouseup = closeDragElement;
+			    // call a function whenever the cursor moves:
+			    document.onmousemove = elementDrag;
+			  }
+
+			  function elementDrag(e) {
+			    e = e || window.event;
+			    e.preventDefault();
+			    // calculate the new cursor position:
+			    pos1 = pos3 - e.clientX;
+			    pos2 = pos4 - e.clientY;
+			    pos3 = e.clientX;
+			    pos4 = e.clientY;
+			    // set the element's new position:
+			    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+			    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+			  }
+
+			  function closeDragElement() {
+			    // stop moving when mouse button is released:
+			    document.onmouseup = null;
+			    document.onmousemove = null;
+			  }
+			}
+		</script>
+		
+	</body>
+	
+	<footer>
+
+	</footer>
+</html>

@@ -1,0 +1,214 @@
+@import url(http://fonts.googleapis.com/css?family=Englebert);
+@import url(http://fonts.googleapis.com/css?family=Kite+One);
+
+body {
+	font-family: 'Kite One', sans-serif;
+	background:#333 url(../images/black_denim.jpg);
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* Seitenelement Stylings */
+.container {
+	width: 80%;
+	max-width: 1260px;
+	min-width: 1050px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.sidebar {
+	float: left;
+	width: 20%;
+	padding-bottom: 10px;
+}
+.content {
+	padding: 10px 55px;
+	width: 67.5%;
+	float: left;
+	margin-top: -25px;
+}
+
+.contentheading {
+	padding: 65px 25px 0px;
+	width: 72.5%;
+	float: left;
+}
+
+/* Sidebar Styling */
+ul.nav {
+	list-style: none; 
+	margin-bottom: 15px; 
+	margin-top: 80px;
+}
+
+ul.nav a {
+	padding: 5px 5px 5px 5px;
+	display: block; 
+	text-decoration: none;
+	color: #6Cf;
+	transition: color 0.25s ease-out;
+}
+
+ul.nav li { margin-bottom: 10px; }
+ul.nav li a span { color: #6cf; }
+ul.nav li a span:hover { color: #4995BA; }
+
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 { color: #6Cf; font-family: 'Englebert', sans-serif; }
+h1.subtitle { font-size: 20px; margin-top: -25px; color: #10B0FF; font-weight: normal; }
+
+/* Typography */
+p { color: #fff; font-family: 'Kite One', sans-serif; }
+a { color: #6Cf; text-decoration: none; font-family: 'Kite One', sans-serif; }
+
+/* List Style */
+ol {
+	counter-reset: li;
+	list-style: none; 
+	*list-style: decimal; /* Normale Nummerierung für IE6/7 */
+	font: 15px 'trebuchet MS', 'lucida sans';
+	padding: 0;
+	margin-bottom: 4em;
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+ol ol {
+	margin: 0 0 0 2em; 
+}
+		
+ol.rounded a{
+    position: relative;
+    display: block;
+    padding: .2em .2em .2em 2em;
+    *padding: .4em;
+    margin: .6em 1em;
+    background: #ccc; /* Background Container */
+    color: #555; /* Font Color */
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;   
+	font-family: 'Kite One', sans-serif;
+}
+
+ol.rounded a:hover{
+    background: #eee; /* Background ohne Kreis */
+}
+
+ol.rounded a:hover:before{
+    transform: rotate(360deg);  
+	border: .3em solid #eee; /* Background Kreis */ 
+}
+
+ol.rounded a:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute; 
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #6Cf;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #ccc;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
+
+/* Input-Style */
+.icon-ph {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    min-width: 16px;
+    padding: 2px 5px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    text-align: center;
+    text-shadow: 0 1px 0 #ffffff;
+    background: #eeeeee;
+    position:absolute;
+    left:3px;
+    top:3px;
+    bottom:3px;
+	border-radius: 5px;
+    z-index:3;
+  }
+.custom-text {
+    padding:6px 6px 6px 30px;
+	border-radius: 5px;
+	outline: none; border: none;
+	width: 150px;
+}
+.input-container {
+	position:relative;
+}
+
+button {
+	font-size: 14px;
+	padding: 5px 15px 5px 15px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+button.red { background: -moz-linear-gradient(top, #ff2819 0%, #ab0000); background: -webkit-gradient(linear, left top, left bottom, from(#ff2819), to(#ab0000)); border: 1px solid #7d0000; }
+button.red:hover { background: #aa0000; }
+
+button.blue { background: -moz-linear-gradient(top, #66ccff 0%, #0080ff); background: -webkit-gradient(linear, left top, left bottom, from(#66ccff), to(#0080ff)); border: 0px solid #26b7ff; }
+button.blue:hover { background: #66ccff; }
+
+button.red span, button.blue span { color: #ebf1f5; }
+
+div#article_show { 
+	width: 100%;
+}
+div#article_show .content { width: 90%; padding: 0 0 0 15px; }
+
+div#article_show ul.article_heading { position: relative; color: #6cf; width: 100%; border-bottom: 1px dotted #6cf; padding: 5px 0 5px 0px; }
+div#article_show ul.article_heading li { display: inline-block; position: relative; }
+div#article_show ul.article_heading li:first-child { width: 49.5%; }
+div#article_show ul.article_heading li:last-child { width: 49%; }
+
+div#article_show li.heading { font-size: 20px; }
+div#article_show li.heading:before { position: relative; font-family: 'iconfont'; content: "\e628"; left: -12px; }
+
+div#article_show li.time { color: #6cf; text-align: right; }
+div#article_show li.time:before { font-family: 'iconfont'; content: "\e60b"; font-weight: normal; padding: 5px 5px 5px 0px;}
+
+#post_article { border-radius: 10px; border: 1px solid #6cf; color: #fff; }
+#post_article .input { width: 400px; }
+
+input.line {
+  display: block;
+  border: none;
+  color: #ccc;
+  background: transparent;
+  border-bottom: 1px dotted #eee;
+  padding: 5px 2px 0 2px; 
+}
+
+input.line:focus { 
+  outline: none;
+  border-color: #51CBEE;
+}
+
+.input_art { 
+	outline: none; 
+	border: none; 
+	border-radius: 5px; 
+	height: 22px; 
+	width: 250px; 
+	padding: 0px 0px 0px 5px; 
+}
+
+#edit_button {
+	position: relative;
+	left: 360px;
+	top: 50px;
+	z-index: 1;
+}

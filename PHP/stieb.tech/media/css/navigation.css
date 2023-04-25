@@ -1,0 +1,136 @@
+/*This code was written by: Winmister332, On 3/35/16 at 6:56PM if you copy this code to your site please leave this comment, just cause it took a while to write and debug this entire code. Otherwise this code is free to use by the public! :D !*/
+
+* {
+  user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: grey;
+}
+
+.header {
+  margin-top: 50px;
+}
+
+
+/*Site Logo is for the logo IMG tag do not add if you do not wish to use the IMG logo!*/
+
+.sitelogo {
+  height: auto;
+  width: 700px;
+  margin: 0 auto;
+}
+
+
+/*Site Logo is for the logo IMG tag do not add if you do not wish to use the IMG logo!*/
+
+.sitelogo img {
+  height: inherit;
+  width: inherit;
+}
+
+.navbar {
+  top: 0;
+  bottom: 10;
+  background-color: black;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  border-bottom: 2px solid #4d4d4d;
+  /*margin-left: 150px;*/
+  text-align: center;
+}
+
+.navbar ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  float: left;
+  list-style-type: none;
+  width: 100px;
+  text-align: center;
+}
+
+.navbar ul li a {
+  position: RELATIVE;
+  text-decoration: none;
+  color: white;
+  line-height: 50px;
+  display: block;
+}
+
+a:hover:not(.active):not(#reflink) {
+  background-color: teal;
+  color: gold;
+}
+
+.active {
+  background-color: red;
+  ;
+}
+
+.dropdown {
+  position: static;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: static;
+  background-color: #0a1010;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 4;
+}
+
+/*.dropdown-content:hover + #reflink {
+  border-bottom: 2px solid green;
+  color: blue;
+  background-color: green;
+}*/
+
+.dropdown:hover + #reflink {
+  color: blue;
+  background-color: green;
+  border-bottom: 1px solid gold;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+iframe {
+  width: inherit;
+  height: inherit;
+}
+
+
+::-webkit-input-placeholder {
+  /* For WebKit browsers */
+  color: #dd3333;
+  font-family: Helvetica Neue;
+  font-weight: bold;
+}
+
+:-moz-placeholder {
+  /* For Mozilla Firefox 4 to 18 */
+  color: #dd3333;
+  font-family: Helvetica Neue;
+  font-weight: bold;
+}
+
+:-ms-input-placeholder {
+  /* For Internet Explorer 10+ */
+  color: #dd3333;
+  font-family: Helvetica Neue;
+  font-weight: bold;
+}

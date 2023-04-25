@@ -1,0 +1,9 @@
+#sldOne,
+#sldTwo,
+#sldThree { display: none }
+
+.next_but {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}

@@ -1,0 +1,100 @@
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif; padding-top: 50px;}
+
+a {text-decoration: none; color: rgba(2,117,216,1); }
+a:hover{text-decoration: none; color: rgba(255,255,255,1)}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(40,40,40,1) !important;
+  z-index: 1000;
+  word-spacing: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+.navigation.scrolled {
+  background-color: rgba(0,0,0,1) !important;
+  transition: background-color 200ms linear;
+  color: #ffffff;
+}
+
+.bgcontainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.videobg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media (min-aspect-ratio: 16/9) {
+  .videobg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .videobg {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slogan {
+  font-size: 80px;
+  color: rgba(255,255,255,0.7);
+  font-weight: bold;
+}
+
+.navright {
+  float: right;
+  word-spacing: 2px;
+  padding-right: 2%;
+}
+
+.inputX {
+  display: block;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 8px;
+  color: #333;
+  box-shadow: 
+    inset 0 2px 0 rgba(0,0,0,.2), 
+    0 0 4px rgba(0,0,0,0.1);
+}
+
+.inputX:focus { 
+  outline: none;
+  box-shadow: 
+    inset 0 2px 0 rgba(0,0,0,.2), 
+    0 0 4px rgba(0,0,0,0.1),
+    0 0 5px 1px #51CBEE;
+}
+
+.searchbar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 12px;
+}

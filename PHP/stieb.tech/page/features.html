@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>stiebler.tech</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="media/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+			$(function () {
+			  $(document).scroll(function () {
+			    var $nav = $(".navigation");
+			    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+			  });
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="navigation">
+			<a href="#home">Home</a>
+			<a href="#content">Possibilites</a>
+			<a href="#contact">Contact</a>
+		</div>
+	</body>
+	
+	<footer>
+
+	</footer>
+</html>
