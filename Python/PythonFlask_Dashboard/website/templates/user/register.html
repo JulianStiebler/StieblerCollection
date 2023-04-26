@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container-fluid border rounded mt-3">
+    <form method="post" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Join Today</legend>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><span data-feather="hash"></span></span>
+                </div>
+                {% if form.username.errors %}
+                    {{ form.username(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.username.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.username(class="form-control form-control-lg", placeholder="Username") }}
+                {% endif %}
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><span data-feather="at-sign"></span></span>
+                </div>
+                {% if form.email.errors %}
+                    {{ form.email(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.email(class="form-control form-control-lg", placeholder="E-Mail") }}
+                {% endif %}
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><span data-feather="key"></span></span>
+                </div>
+                {% if form.password.errors %}
+                    {{ form.password(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.password(class="form-control form-control-lg", placeholder="Password") }}
+                {% endif %}
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><span data-feather="key"></span></span>
+                </div>
+                {% if form.confirm_password.errors %}
+                    {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.confirm_password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.confirm_password(class="form-control form-control-lg", placeholder="Confirm Password") }}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.accepttos() }}
+                {{ form.accepttos.label(class="form-control-label") }}
+                I have read the 
+                    <a href="{{ url_for('legal.termsofservice') }}">Terms of Service</a> & 
+                    <a href="{{ url_for('legal.privacypolicy') }}">Privacy (Data) Policy</a> 
+                    and agree to them.
+            </div>
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-primary btn-lg")}}
+        </div>
+    </form>
+    <div class="border-top pt-3" align="center" style="margin-bottom: 20px">
+        <small class="text-muted">
+            Already Have an Account? <a class="ml-2" href="{{ url_for('users.login') }}"> Log In!</a>
+        </small>
+    </div>
+</div>
+{% endblock content %}
+

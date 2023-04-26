@@ -1,0 +1,1 @@
+pyinstaller --noconfirm --onedir --console --name "PyChess" --add-data "P:/Development/PyChess/ChessEngine.py;." --add-data "P:/Development/PyChess/sounds;sounds/" --add-data "P:/Development/PyChess/images;images/"  "P:/Development/PyChess/ChessMain.py"

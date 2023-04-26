@@ -1,0 +1,65 @@
+<footer class="page-footer font-small border-top mt-5">
+    <div class="container text-center text-md-left mt-5">
+        <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <p>You reached the end of this site. <br> <a href="#top">Go back to the top.</a><br>
+                {% if current_user.is_authenticated %}
+                <h4>Contact</h4>
+                    12345 Musterstadt<br>
+                    info@example.com<br>
+                    +01 234 567 89
+                {% endif %}
+                </p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold border-bottom">Legal</h6>
+                <p>
+                    <a href="{{ url_for('legal.impressum') }}">Impressum</a><br>
+                    <a href="{{ url_for('legal.termsofservice') }}">Terms of Service</a><br>
+                    <a href="{{ url_for('legal.privacypolicy') }}">Privacy Policy</a><br>
+                    <a href="{{ url_for('legal.cookiepolicy') }}">Cookie Policy</a><br>
+                </p>
+            </div>
+            {% if current_user.is_authenticated %}
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold border-bottom">Useful links</h6>
+                <p>
+                    <a href="{{ url_for('dashboard.home') }}">Dashboard</a><br>
+                    <a href="{{ url_for('dashboard.home') }}">Documentation</a><br>
+                    <a href="{{ url_for('dashboard.home') }}">Justice</a><br>
+                    <a href="{{ url_for('dashboard.home') }}">Overview</a><br>
+                    <a href="{{ url_for('dashboard.home') }}">Controller</a><br>
+                </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase font-weight-bold">Last entrys</h6>
+                <p>
+                    {% for post in posts %}
+                            <a href="{{ url_for('dashboard.home', post_id=post.id) }}">
+                                {{ post.title }}</a><br>
+                    {% endfor %}
+                </p>
+            </div>
+            {% else %}
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold border-bottom">Useful Links</h6>
+                <p>
+                    <a href="{{ url_for('users.login') }}">Login</a><br>
+                    <a href="{{ url_for('users.register') }}">Register</a>
+                </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                <p>
+                    12345 Musterstadt<br>
+                    info@example.com<br>
+                    +01 234 567 89
+                </p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3">
+        © 2020 Copyright: <a href="{{ url_for('dashboard.home') }}">StiebAPI.com</a>
+    </div>
+</footer>

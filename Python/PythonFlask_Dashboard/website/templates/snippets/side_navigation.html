@@ -1,0 +1,47 @@
+<!-- START Side-Navigation bar  -->
+<nav class="col-md-2 d-none d-md-block bg-dark sidebar">
+    <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{{ url_for('dashboard.dashboard_home') }}">
+                    <span data-feather="trending-up" style="margin-bottom: 2px"></span> Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{{ url_for('documentation.documentation_home') }}">
+                    <span data-feather="book" style="margin-bottom: 2px"></span> Documentation
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{{ url_for('dashboard.dashboard_justice') }}">
+                    <span data-feather="target" style="margin-bottom: 2px"></span> Justice
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{{ url_for('dashboard.dashboard_controller') }}">
+                    <span data-feather="terminal" style="margin-bottom: 2px"></span> Controller
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{{ url_for('dashboard.dashboard_users') }}">
+                    <span data-feather="activity" style="margin-bottom: 2px"></span> User Overview
+                </a>
+            </li>
+        </ul>
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Last created</span>
+            <a class="d-flex align-items-center text-muted" href="{{ url_for('documentation.new_entry') }}">
+                <span data-feather="plus-circle" style="margin-bottom: 2px"></span>
+            </a>
+        </h6>
+        {% for post in posts %}
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{{ url_for('documentation.entry', entry_id=post.id) }}">
+                    <span data-feather="file" style="margin-bottom: 2px"></span> {{ post.title }}
+                </a>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+</nav>

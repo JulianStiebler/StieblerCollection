@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container-fluid border rounded mt-3">
+        {% if title == 'About' %}
+            {% include 'snippets/about/about.html' %}
+
+        {% elif title == 'Cookie Policy' %}
+            {% include 'snippets/about/cookiepolicy.html' %}
+
+        {% elif title == 'Impressum' %}
+            {% include 'snippets/about/impressum.html' %}
+
+        {% elif title == 'Privacy Policy' %}
+            {% include 'snippets/about/privacypolicy.html' %}
+
+        {% elif title == 'Terms of Service' %}
+            {% include 'snippets/about/termsofservice.html' %}
+            
+        {% endif %}
+    </div>
+{% endblock content %}
