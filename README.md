@@ -19,3 +19,4 @@
 * [QoL](.public/QoL/README.md)
   * [Windows CMD Aliases](.public/QoL/aliases.bat)
   > You need to create a registry-key to autorun a specific bat, which defines different DOSKEY to initalize special shortcutted commands.
+  * [Useful Download Collection](.public/QoL/README.md)
