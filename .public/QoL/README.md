@@ -1,17 +1,19 @@
 # Online Collections
-* `Apple Related`
-  * `MacOSX`
+* `Operating Systems`
+  * `Apple`
     * ![MacOS X Desktop ISO Collection (10.10.5 - 13.0 developer seed)][mac_collection]
     * ![MacOS X Server 10.4.dmg][mac_server_1]
     * ![MacOS X Server 10.5.iso][mac_server_2]
     * ![MacOS X Server 10.6.iso][mac_server_3]
     * ![MacOS X Desktop 10.5.vdi][mac_vm_10.5]
-  * ![IPSW Collection][ipsw]
-  
-* `Microsoft Related` 
-  * ![Massgravel's Activate Windows Scripts][windows_activate]
-  * ![OSVault's Windows OS Repository][windows_os_collection]
-  * ![OSVault's Windows Software Repository][windows_software_repo]
+    * ![IPSW Collection][ipsw]
+  * `Microsoft` 
+    * ![Massgravel's Activate Windows Scripts][windows_activate]
+    * ![OSVault's Windows OS Repository][windows_os_collection]
+    * ![OSVault's Windows Software Repository][windows_software_repo]
+  * `General Collection`
+    * ![WinWorldPC OS Collection][OS_Collection]
+    * ![WinWorldPC Software Collection][Software_Collection]
 
 * `Games`
   * `Emulation`
@@ -32,6 +34,9 @@
 [windows_activate]: https://github.com/massgravel/Microsoft-Activation-Scripts
 [windows_os_collection]: https://osvault.weebly.com/windows-repository.html
 [windows_software_repo]: https://osvault.weebly.com/software-repository.html
+
+[OS_Collection]: https://winworldpc.com/library/operating-systems#
+[Software_Collection]: https://winworldpc.com/library/applications
 
 [vimms_lair]: https://vimm.net/?p=emulate
 [vimms_vault]: https://vimm.net/?p=vault
