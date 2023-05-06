@@ -4,6 +4,7 @@
 ![shield_own]
   * [CMD Aliases Workaround][own_1]
   > Since the commandoline-tool doesnt save aliases but rather needs them set every start, heres a workaround. It sets a .bat to be AutoRun by CommandProcessor whenever a CMD is opened. The .bat inlcudes all kind of useful aliases like ```ls, clear, activate-venv``` etc. 
+  * [Generate Encryption Keys][own_2]
 
 ## Operating Systems
 
@@ -36,6 +37,7 @@
   * ![FitGirl Repacks][fitgirl]
 
 [own_1]: aliases.bat
+[own_2]: generate-encryption-keys.py
 
 [mac_collection]: https://archive.org/details/macos-collection
 [mac_server_1]: https://archive.org/details/macos-x-10.4-tiger-cd-rom
