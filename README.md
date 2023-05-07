@@ -1,6 +1,6 @@
 # Welcome to the Public Collection of Julian Stiebler
 
-> All code here is written by me, excluding imported libraries of course.
+> All code here is written by me, excluding imported libraries of course aswell as the [Useful Download Collection](QoL/README.md).
 
 ## `Table of Contents`
 
