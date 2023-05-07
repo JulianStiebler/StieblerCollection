@@ -1,0 +1,23 @@
+name: black
+
+on:
+    push:
+      branches:
+        - main
+      paths-ignore: 
+        - 'development/**'
+  
+    pull_request:
+      paths-ignore:
+        - 'development/**'
+        
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: psf/black@stable
+        with:
+          options: ". -v"
+          version: "~= 22.0"
