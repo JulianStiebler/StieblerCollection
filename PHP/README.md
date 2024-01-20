@@ -1,5 +1,5 @@
 # My Old PHP Projects
-
+> These are VERY old projects of mine. They are unsafe and badly coded.
 > I appreciate to see that my young self already used some form of comments in my code.
 
 ## `stieb.tech`
@@ -14,4 +14,4 @@
 ## `MyPHPBlog`
 
 ![Animation](MyPHPBlog/raw_html/preview.gif)
-> Fun little side project in early beginnings, trying my self on own .css files.
+> Fun little side project in early beginnings, trying my self on own .css files. 
