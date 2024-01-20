@@ -5,7 +5,7 @@
 * Python
   * [PythonChess](Python/Python_Chess/README.md)
   > Fully working Chess with only the basic functionalities. No PNG support etc. but all Game Rules implemented (En Passant, Checkmate, Mate, etc)
-  * ![PythonFlask_Dashboard](pythonflask_stiebapi)
+  * [PythonFlask_Dashboard](https://github.com/JulianStiebler/PythonFlask_StiebAPI)
   > Fully featured Flask blueprint-factory dashboard with CSRF protection, authentication, user profiles, forms as modals, alert popups, responsive webdesign and blog-functionality with labels and filters. Deprecated and unfinished, but released cause why not. Nearly fully documentated.
 
  
@@ -24,4 +24,3 @@
 [php_myphpblog]: PHP/MyPHPBlog/README.md
 [php_scoialyze]: PHP/SOCIALYZE/README.md
 [php_stiebtech]: PHP/stieb.tech/README.md
-[pythonflask_stiebapi]: https://github.com/JulianStiebler/PythonFlask_StiebAPI
